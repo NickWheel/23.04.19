@@ -217,8 +217,8 @@
         margin: 0;
         padding: 10px;
         display: grid;
-        // grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        // grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 'b b b b b b'
                              'b b b b b b'
                              'b b b b b b'
@@ -229,17 +229,18 @@
     
         div{
             background-color: lime;
-            min-width: 100px;
-            min-height: 100px;
+            min-width: 30px;
+            min-height: 30px;
             border: 2px solid black;
     
             &:nth-child(2n) {
-                background-color: cyan;
+                background-color: lime;
             }
             &:nth-child(1) {
                 // grid-column-start: 1;
                 // grid-column-end: 2;
                 grid-area: b;
+                background-color: cyan;
             }
             &:nth-child(2) {
                 // grid-column-start: 2;
